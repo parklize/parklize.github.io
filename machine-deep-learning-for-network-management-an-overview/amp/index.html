@@ -21,7 +21,7 @@
     <meta property="og:url" content="http://localhost:2368/machine-deep-learning-for-network-management-an-overview/" />
     <meta property="og:image" content="http://localhost:2368/content/images/2018/11/label-text-network-computer-hardware-cpu-electronic-chip-electronics-h.jpg" />
     <meta property="article:published_time" content="2018-10-26T21:45:53.000Z" />
-    <meta property="article:modified_time" content="2019-01-05T23:46:45.000Z" />
+    <meta property="article:modified_time" content="2019-06-12T20:45:33.000Z" />
     <meta property="article:tag" content="post" />
     <meta property="article:tag" content="network" />
     <meta property="article:tag" content="management" />
@@ -71,7 +71,7 @@
     "headline": "Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks",
     "url": "http://localhost:2368/machine-deep-learning-for-network-management-an-overview/",
     "datePublished": "2018-10-26T21:45:53.000Z",
-    "dateModified": "2019-01-05T23:46:45.000Z",
+    "dateModified": "2019-06-12T20:45:33.000Z",
     "image": {
         "@type": "ImageObject",
         "url": "http://localhost:2368/content/images/2018/11/label-text-network-computer-hardware-cpu-electronic-chip-electronics-h.jpg",
@@ -126,8 +126,12 @@
 <h1 id="introduction">Introduction</h1>
 <p>Machine learning &amp; deep learning techniques have advanced many fields such as Computer Vision (CV) and Natural Language Processing (NLP), and also have been embedded in our daily lives, e.g., classifying images, facial recognition, and recommending items in Amazon<sup class="footnote-ref"><a href="index.html#fn1" id="fnref1">[1]</a></sup> or Netflix<sup class="footnote-ref"><a href="index.html#fn2" id="fnref2">[2]</a></sup>.The following figure from Fadlullah et al. <sup class="footnote-ref"><a href="index.html#fn3" id="fnref3">[3]</a></sup> provides a good summary of different machine learning techniques and their applications.</p>
 
-<p> <br />
-In the networking community, there has been many proposals to explore machine/deep learning for controlling and operating networks. <strong>Knowledge Plane (KP)</strong> <sup class="footnote-ref"><a href="index.html#fn4" id="fnref4">[4]</a></sup> is one of the first proposals to incorporate a knowledge plane, which relies on machine learning and cognitive techniques for network management &amp; operations. More recently, <strong>Knowledge-Defined Networking (KDN)</strong> <sup class="footnote-ref"><a href="index.html#fn5" id="fnref5">[5]</a></sup> restaed the concept of KP in the context of the Software-Defined Networking (SDN), which can provide a centralized control with a rich view of the network via network analytics.</p>
+<p> </p>
+
+
+<p><ins class="adsbygoogle" data-ad-client="ca-pub-9673038949803914" data-ad-slot="4115851559"></ins></p>
+
+<p>In the networking community, there has been many proposals to explore machine/deep learning for controlling and operating networks. <strong>Knowledge Plane (KP)</strong> <sup class="footnote-ref"><a href="index.html#fn4" id="fnref4">[4]</a></sup> is one of the first proposals to incorporate a knowledge plane, which relies on machine learning and cognitive techniques for network management &amp; operations. More recently, <strong>Knowledge-Defined Networking (KDN)</strong> <sup class="footnote-ref"><a href="index.html#fn5" id="fnref5">[5]</a></sup> restaed the concept of KP in the context of the Software-Defined Networking (SDN), which can provide a centralized control with a rich view of the network via network analytics.</p>
 <p>On the one hand, recent advances of networking technologies such as SDN, Network Function Virtualization (NFV) and Telemetry provide unique opportunities for adopting machine/deep learning techniques with the huge amount of data we can gather with a centralized view &amp; control. On the other hand, the growing complexity of future networks which cannot be handled by simple heuristics and human, also requires the help of machine/deep learning approaches for automation as well as recommendations for network control, operations and management.</p>
 <p>In line with the KDN vision, there has been many surveys discussing challenges, opportunities with promising problems that can be dealt with machine/deep learning approaches <sup class="footnote-ref"><a href="index.html#fn6" id="fnref6">[6]</a></sup><sup class="footnote-ref"><a href="index.html#fn3" id="fnref3:1">[3:1]</a></sup><sup class="footnote-ref"><a href="index.html#fn7" id="fnref7">[7]</a></sup><sup class="footnote-ref"><a href="index.html#fn8" id="fnref8">[8]</a></sup><sup class="footnote-ref"><a href="index.html#fn9" id="fnref9">[9]</a></sup><sup class="footnote-ref"><a href="index.html#fn10" id="fnref10">[10]</a></sup><sup class="footnote-ref"><a href="index.html#fn11" id="fnref11">[11]</a></sup><sup class="footnote-ref"><a href="index.html#fn12" id="fnref12">[12]</a></sup><sup class="footnote-ref"><a href="index.html#fn13" id="fnref13">[13]</a></sup><sup class="footnote-ref"><a href="index.html#fn14" id="fnref14">[14]</a></sup><sup class="footnote-ref"><a href="index.html#fn15" id="fnref15">[15]</a></sup><sup class="footnote-ref"><a href="index.html#fn16" id="fnref16">[16]</a></sup>. The following summaries for each survey might be useful as a pointer for each survey if the reader wants to delve into details.</p>
 <ul>
@@ -173,6 +177,10 @@ In the networking community, there has been many proposals to explore machine/de
 </ul>
 <h3 id="unsupervisedlearning">Unsupervised Learning</h3>
 <p>There are many situations that we do not have labeled data for supervised learning or it is impractical to wait for feedback for reinforcement learning. Unsupervised learning aims to infer representations from data that has not been labeled, classified or categorized. These representations can be used for many downstream tasks such as clustering, or improving the performance of related supervised learning tasks. In contrast to the amount of works done with supervised learning and reinforcement learning for different problems in the networking field, unsupervised learning has been less explored in this field <sup class="footnote-ref"><a href="index.html#fn11" id="fnref11:2">[11:2]</a></sup>.</p>
+
+
+<p><ins class="adsbygoogle" data-ad-client="ca-pub-9673038949803914" data-ad-slot="4115851559"></ins></p>
+
 <p>However, unsupervised learning has gained a lot of attention and successfully advancing other fields such as NLP. For example, word2vec <sup class="footnote-ref"><a href="index.html#fn22" id="fnref22">[22]</a></sup> in NLP clearly shows the latent representations of words which are pre-trained (or learned via an unsupervised learning approach) with a large corpus of documents (e.g., <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> can be used for many downstream tasks such as document clustering and sentiment classification.</p>
 <p><strong>Learing internal representations of networking data</strong>: COMANETS (COgnition-BAsed NETworkS) <sup class="footnote-ref"><a href="index.html#fn21" id="fnref21:1">[21:1]</a></sup> is a recent concept for leveraging unsupervised learning (using Restricted Boltzmann Machine) to learn the latent representations of networking data. A practical example using the COMANETS concept for cognitive controlling video traffic shows that using the latent representations can improve the control performance compared to the raw networking features.</p>
 <p>The following figure shows the COMPANETS concept <sup class="footnote-ref"><a href="index.html#fn21" id="fnref21:2">[21:2]</a></sup>. Similar to the word vectors (latent representations or embeddings) in NLP, the latent representations of networking data can be used for many downstream tasks along with supervised learning &amp; reinforcement learning.</p>
@@ -186,6 +194,10 @@ In the networking community, there has been many proposals to explore machine/de
 <p> <br />
 <strong>Closed loop</strong>: The models learned from supervised learning or reinforcement learning can be directly used for <em>automation</em> and making decisions by itself without any human (e.g., operator) involvement. The models can also be used for <em>optimizing</em> the network configuration out of different possible configurations based on the corresponding performance. The knowledge extracted via unsupervised learning can be used for improving other tasks with respect to networking.</p>
 <p><strong>Open loop</strong>: In this case, human is still in charge of making the final decision, and the insight (e.g., predicted values, classes etc.) helps humans to make the decision. For example, a human can <em>validate</em> and then approve/deny the decisions made by a model learned via supervised learning, or use the <em>estimation</em> of the model into consideration. Similarly, the correlations between different features can be taken into consideration when a human making decision.</p>
+
+
+<p><ins class="adsbygoogle" data-ad-client="ca-pub-9673038949803914" data-ad-slot="4115851559"></ins></p>
+
 <h1 id="benchmarkdatasets">Benchmark Datasets</h1>
 <p>Given the recent rapid development of machine &amp; deep learning in other domains with benchmark datasets such as <a href="http://www.image-net.org/">ImageNet</a> for Computer Vision &amp; the ones (<a href="http://nlpprogress.com/">http://nlpprogress.com/</a>) for Natural Language Processing, it is obvious that we need to push hard to have many benchmarks available for advancing machine &amp; deep learning approaches in the networking domain<sup class="footnote-ref"><a href="index.html#fn6" id="fnref6:2">[6:2]</a></sup>. In the following table, we summarize some benchmark datasets that are publicly available for benchmarking different machine/deep learning algorithms.</p>
 <h3 id="prediction">Prediction</h3>
