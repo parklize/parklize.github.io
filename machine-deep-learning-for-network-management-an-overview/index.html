@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="../assets/img/apple-touch-icon-57x57.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="60x60" href="../assets/img/apple-touch-icon-60x60.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="72x72" href="../assets/img/apple-touch-icon-72x72.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-touch-icon-76x76.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="114x114" href="../assets/img/apple-touch-icon-114x114.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/apple-touch-icon-120x120.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="144x144" href="../assets/img/apple-touch-icon-144x144.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/apple-touch-icon-152x152.png?v=wAAv6Wqe6l">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon-180x180.png?v=wAAv6Wqe6l">
+<link rel="icon" type="image/png" href="../assets/img/favicon-32x32.png?v=wAAv6Wqe6l" sizes="32x32">
+<link rel="icon" type="image/png" href="../assets/img/favicon-194x194.png?v=wAAv6Wqe6l" sizes="194x194">
+<link rel="icon" type="image/png" href="../assets/img/favicon-96x96.png?v=wAAv6Wqe6l" sizes="96x96">
+<link rel="icon" type="image/png" href="../assets/img/android-chrome-192x192.png?v=wAAv6Wqe6l" sizes="192x192">
+<link rel="icon" type="image/png" href="../assets/img/favicon-16x16.png?v=wAAv6Wqe6l" sizes="16x16">
+<link rel="manifest" href="../assets/img/manifest.json?v=wAAv6Wqe6l">
+<link rel="shortcut icon" href="../assets/img/favicon.ico?v=wAAv6Wqe6l">
+<meta name="msapplication-TileColor" content="#e74c3c">
+<meta name="msapplication-TileImage" content="/assets/img/mstile-144x144.png?v=wAAv6Wqe6l">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml?v=wAAv6Wqe6l">
+<meta name="theme-color" content="#e74c3c">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600%7CRoboto+Slab:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../assets/css/uno-zen.css?v=9645247b2e" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <link rel="canonical" href="index.html" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="amp/index.html" />
+    
+    <meta property="og:site_name" content="Guangyuan Piao " />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks" />
+    <meta property="og:description" content="This post gives a general overview of the set of tasks with respect to the networking with machine learning and deep learning, and provide a list of benchmark datasets that can play with for networking.  Introduction Machine learning &amp;amp; deep learning techniques have advanced many fields such as Computer Vision" />
+    <meta property="og:url" content="http://localhost:2368/machine-deep-learning-for-network-management-an-overview/" />
+    <meta property="og:image" content="http://localhost:2368/content/images/2018/11/label-text-network-computer-hardware-cpu-electronic-chip-electronics-h.jpg" />
+    <meta property="article:published_time" content="2018-10-26T21:45:53.000Z" />
+    <meta property="article:modified_time" content="2019-06-12T20:45:33.000Z" />
+    <meta property="article:tag" content="post" />
+    <meta property="article:tag" content="network" />
+    <meta property="article:tag" content="management" />
+    <meta property="article:tag" content="resource" />
+    <meta property="article:tag" content="deep learning" />
+    <meta property="article:tag" content="machine learning" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks" />
+    <meta name="twitter:description" content="This post gives a general overview of the set of tasks with respect to the networking with machine learning and deep learning, and provide a list of benchmark datasets that can play with for networking.  Introduction Machine learning &amp;amp; deep learning techniques have advanced many fields such as Computer Vision" />
+    <meta name="twitter:url" content="http://localhost:2368/machine-deep-learning-for-network-management-an-overview/" />
+    <meta name="twitter:image" content="http://localhost:2368/content/images/2018/11/label-text-network-computer-hardware-cpu-electronic-chip-electronics-h.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Guangyuan Piao" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="post, network, management, resource, deep learning, machine learning" />
+    <meta name="twitter:site" content="@parklize" />
+    <meta property="og:image:width" content="360" />
+    <meta property="og:image:height" content="240" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Guangyuan Piao ",
+        "url": "http://localhost:2368/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "http://localhost:2368/content/images/2019/12/JIvPv1G5_400x400-1.png"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Guangyuan Piao",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/ee2e8b4af1b5ef19d837c19495c62c67?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "http://localhost:2368/author/guangyuan/",
+        "sameAs": []
+    },
+    "headline": "Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks",
+    "url": "http://localhost:2368/machine-deep-learning-for-network-management-an-overview/",
+    "datePublished": "2018-10-26T21:45:53.000Z",
+    "dateModified": "2019-06-12T20:45:33.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "http://localhost:2368/content/images/2018/11/label-text-network-computer-hardware-cpu-electronic-chip-electronics-h.jpg",
+        "width": 360,
+        "height": 240
+    },
+    "keywords": "post, network, management, resource, deep learning, machine learning",
+    "description": "This post gives a general overview of the set of tasks with respect to the\nnetworking with machine learning and deep learning, and provide a list of\nbenchmark datasets that can play with for networking.\n\nIntroduction\nMachine learning &amp; deep learning techniques have advanced many fields such as\nComputer Vision (CV) and Natural Language Processing (NLP), and also have been\nembedded in our daily lives, e.g., classifying images, facial recognition, and\nrecommending items in Amazon[1] or Netflix[2].T",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.41" />
+    <link rel="alternate" type="application/rss+xml" title="Guangyuan Piao " href="../rss/index.html" />
+    <script>
+var disqus_shortname = 'parklize'
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-30275479-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-30275479-2');
+</script>
+<script type="application/ld+json"> {
+"@context": "http://schema.org",
+"@type": "Person",
+"name": "Guangyuan Piao",
+    "jobTitle": "Research Scientist",
+    "identifier": "https://orcid.org/0000-0003-0516-2802",
+    "sameAs": ["https://scholar.google.com/citations?user=eP2hfcIAAAAJ&hl=en", "https://parklize.github.io/"]
+}
+</script>
+  </head>
+  <body class="post-template tag-post-tag tag-network tag-management tag-resource tag-deep-learning tag-machine-learning">
+    <header id="menu-button" class="expanded">
+      <a><i class="icon icon-list"></i></a>
+    </header>
+    <aside class="cover" style="background: url(https://casper.ghost.org/v1.0.0/images/blog-cover.jpg) center/cover no-repeat fixed">
+  <div class="cover container">
+    <div class="profile">
+      <a id="avatar-link" title="link to homepage for Guangyuan Piao " href="../index.html#open">
+        <img src="../content/images/2019/12/JIvPv1G5_400x400-1.png" alt="Guangyuan Piao  avatar" class="profile avatar rounded hvr-buzz-out" />
+        <h1 id="profile-title">Guangyuan Piao </h1>
+        <h3 id="profile-resume"></h3>
+      </a>
+
+      <hr class="divider long" />
+      <p>CS Lecturer/Assistant Professor at Maynooth University. Interested in understanding user and machine behaviors via AI, ML, DL</p>
+      <hr class="divider short" />
+      <div class="navigation">
+        <div class="profile contact">
+          <nav class="navigation left">
+  <ul class="links">
+      <li class="nav-about ">
+        <a href="../about/index.html">About</a>
+      </li>
+      <li class="nav-research ">
+        <a href="../research/index.html">Research</a>
+      </li>
+      <li class="nav-teaching ">
+        <a href="../teaching/index.html">Teaching</a>
+      </li>
+      <li class="nav-people ">
+        <a href="../people/index.html">People</a>
+      </li>
+      <li class="nav-scholarships ">
+        <a href="../scholarships/index.html">Scholarships</a>
+      </li>
+      <li class="nav-blog ">
+        <a href="https://parklize.blogspot.com">Blog</a>
+      </li>
+      <li class="nav-news ">
+        <a href="../news/index.html">News</a>
+      </li>
+      <li class="nav-bucket-list ">
+        <a href="../bucket-list/index.html">Bucket List</a>
+      </li>
+  </ul>
+</nav>
+
+          
+<nav class="navigation right">
+  <ul class="social expanded">
+
+  <!-- Twitter -->
+  <li class="social item hvr-grow-rotate">
+    <a rel="me" target="blank" href="https://twitter.com/parklize" title="@parklize on Twitter">
+      <i class='icon icon-social-twitter'></i>
+      <span class="label">Twitter</span>
+    </a>
+  </li>
+
+  <!-- Linkedin -->
+  <li class="social item hvr-grow-rotate">
+    <a rel="me" target="blank" href="https://linkedin.com/in/piaoguangyuan" title="Guangyuan Piao on LinkedIn">
+      <i class='icon icon-social-linkedin'></i>
+      <span class="label">Linkedin</span>
+    </a>
+  </li>
+
+  <!-- Github -->
+  <li class="social item hvr-grow-rotate">
+    <a rel="me" target="blank" href="https://scholar.google.com/citations?user=eP2hfcIAAAAJ&hl=en&oi=ao" title="Guangyuan Piao on Google Scholar">
+      <i class='icon icon-social-google-plus'></i>
+      <span class="label">Github</span>
+    </a>
+  </li>
+
+  <!-- RSS -->
+  <li class="social item hvr-grow-rotate">
+    <a href="mailto:guangyuan.piao@mu.ie" title="Email">
+      <i class='icon icon-mail'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  </ul>
+</nav>
+          <section class="icon icon-search" id="search-container">
+  <hr class="divider short" />
+  <form target="blank" id="search-form" action="https://www.google.com/#q=site:http://localhost:2368">
+    <input type="text" name="search" placeholder="git, css, javascript,..." id="search-field" />
+  </form>
+</section>
+        </div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+    <main data-no-instant>
+      <section class="content">
+        
+
+  <article class="post tag-post-tag tag-network tag-management tag-resource tag-deep-learning tag-machine-learning">
+    <header>
+      <div class="post meta">
+        <time datetime="2018-10-26T21:10">26 Oct 2018</time>
+        <span class="post tags">in <a href="../tag/post-tag/index.html">post</a> <a href="../tag/network/index.html">network</a> <a href="../tag/management/index.html">management</a> <a href="../tag/resource/index.html">resource</a> <a href="../tag/deep-learning/index.html">deep learning</a> <a href="../tag/machine-learning/index.html">machine learning</a></span>
+
+
+        <span class="post reading-time"> ~ <span></span> read.</span>
+      </div>
+      <a title="Tweet 'Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks'" href="https://twitter.com/intent/tweet?text=Machine%20%26%20Deep%20Learning%20for%20Network%20Management%3A%20An%20Overview%20with%20Benchmarks%20%C2%BB&amp;hashtags=post,network,management,resource,deep learning,machine learning&amp;url=https://parklize.github.io/machine-deep-learning-for-network-management-an-overview/">
+        <img id="post-image" src="../content/images/2018/11/label-text-network-computer-hardware-cpu-electronic-chip-electronics-h.jpg" alt="Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks">
+        <h1 class="icon-reverse icon-social-twitter-post" id="post-title">Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks</h1>
+      </a>
+    </header>
+
+    <div id="post-content" class="post tag-post-tag tag-network tag-management tag-resource tag-deep-learning tag-machine-learning">
+      <!--kg-card-begin: markdown--><p>This post gives a general overview of the set of tasks with respect to the networking with machine learning and deep learning, and provide a list of benchmark datasets that can play with for networking.</p>
+<h1 id="introduction">Introduction</h1>
+<p>Machine learning &amp; deep learning techniques have advanced many fields such as Computer Vision (CV) and Natural Language Processing (NLP), and also have been embedded in our daily lives, e.g., classifying images, facial recognition, and recommending items in Amazon<sup class="footnote-ref"><a href="index.html#fn1" id="fnref1">[1]</a></sup> or Netflix<sup class="footnote-ref"><a href="index.html#fn2" id="fnref2">[2]</a></sup>.The following figure from Fadlullah et al. <sup class="footnote-ref"><a href="index.html#fn3" id="fnref3">[3]</a></sup> provides a good summary of different machine learning techniques and their applications.</p>
+<img src="../content/images/2018/10/ML.png" alt="drawing" width="100%"/>
+<p> </p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- parklize_main_Blog1_728x90_as -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9673038949803914"
+     data-ad-slot="4115851559"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>In the networking community, there has been many proposals to explore machine/deep learning for controlling and operating networks. <strong>Knowledge Plane (KP)</strong> <sup class="footnote-ref"><a href="index.html#fn4" id="fnref4">[4]</a></sup> is one of the first proposals to incorporate a knowledge plane, which relies on machine learning and cognitive techniques for network management &amp; operations. More recently, <strong>Knowledge-Defined Networking (KDN)</strong> <sup class="footnote-ref"><a href="index.html#fn5" id="fnref5">[5]</a></sup> restaed the concept of KP in the context of the Software-Defined Networking (SDN), which can provide a centralized control with a rich view of the network via network analytics.</p>
+<p>On the one hand, recent advances of networking technologies such as SDN, Network Function Virtualization (NFV) and Telemetry provide unique opportunities for adopting machine/deep learning techniques with the huge amount of data we can gather with a centralized view &amp; control. On the other hand, the growing complexity of future networks which cannot be handled by simple heuristics and human, also requires the help of machine/deep learning approaches for automation as well as recommendations for network control, operations and management.</p>
+<p>In line with the KDN vision, there has been many surveys discussing challenges, opportunities with promising problems that can be dealt with machine/deep learning approaches <sup class="footnote-ref"><a href="index.html#fn6" id="fnref6">[6]</a></sup><sup class="footnote-ref"><a href="index.html#fn3" id="fnref3:1">[3:1]</a></sup><sup class="footnote-ref"><a href="index.html#fn7" id="fnref7">[7]</a></sup><sup class="footnote-ref"><a href="index.html#fn8" id="fnref8">[8]</a></sup><sup class="footnote-ref"><a href="index.html#fn9" id="fnref9">[9]</a></sup><sup class="footnote-ref"><a href="index.html#fn10" id="fnref10">[10]</a></sup><sup class="footnote-ref"><a href="index.html#fn11" id="fnref11">[11]</a></sup><sup class="footnote-ref"><a href="index.html#fn12" id="fnref12">[12]</a></sup><sup class="footnote-ref"><a href="index.html#fn13" id="fnref13">[13]</a></sup><sup class="footnote-ref"><a href="index.html#fn14" id="fnref14">[14]</a></sup><sup class="footnote-ref"><a href="index.html#fn15" id="fnref15">[15]</a></sup><sup class="footnote-ref"><a href="index.html#fn16" id="fnref16">[16]</a></sup>. The following summaries for each survey might be useful as a pointer for each survey if the reader wants to delve into details.</p>
+<ul>
+<li><sup class="footnote-ref"><a href="index.html#fn6" id="fnref6:1">[6:1]</a></sup> - Defined <strong>the workflow of machine learning for networking</strong> &amp; provided an overview of the studies based on the workflow.</li>
+<li><sup class="footnote-ref"><a href="index.html#fn3" id="fnref3:2">[3:2]</a></sup> - Review of deep learning approaches for <strong>network traffic control</strong>.</li>
+<li><sup class="footnote-ref"><a href="index.html#fn7" id="fnref7:1">[7:1]</a></sup> - Brief oerview of <a href="http://www.ciscopress.com/store/network-management-fundamentals-9781587052804">FCAPS (Fault, Configuration, Accounting, Performance, Security) management</a>, and a proposal of C-MAPE: a concept of cognitive control loop for network management on top of MAPE (Monitor-Analyze-Plan-Excute <sup class="footnote-ref"><a href="index.html#fn17" id="fnref17">[17]</a></sup>).</li>
+<li><sup class="footnote-ref"><a href="index.html#fn9" id="fnref9:1">[9:1]</a></sup> - Deep learning vision for <strong>network traffic control</strong>.</li>
+<li><sup class="footnote-ref"><a href="index.html#fn10" id="fnref10:1">[10:1]</a></sup> - Detailed overview of recent AI (Artificial Intelligence not only machine learning) approaches applied to <strong>the SDN paradigm</strong>.</li>
+<li><sup class="footnote-ref"><a href="index.html#fn11" id="fnref11:1">[11:1]</a></sup> - Review of <strong>unsupervised learning</strong> for networking.</li>
+<li><sup class="footnote-ref"><a href="index.html#fn13" id="fnref13:1">[13:1]</a></sup><sup class="footnote-ref"><a href="index.html#fn12" id="fnref12:1">[12:1]</a></sup> - Overview of AI techniques &amp; taxonomies for <a href="index.html#son">SON (Self-Organizing Networks)</a></li>
+<li><sup class="footnote-ref"><a href="index.html#fn15" id="fnref15:1">[15:1]</a></sup> - Review of AI techniques for <strong>cognitive routing</strong>.</li>
+<li><sup class="footnote-ref"><a href="index.html#fn16" id="fnref16:1">[16:1]</a></sup> - Review and provide taxonomy of cloud <strong>autoscaling</strong> systems</li>
+<li><sup class="footnote-ref"><a href="index.html#fn14" id="fnref14:1">[14:1]</a></sup> - Comprehensive survey on machine learning for networking problems (the most comprehensive/longest one with 500+ references).</li>
+</ul>
+<script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- parklize_main_Blog1_728x90_as -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9673038949803914"
+     data-ad-slot="4115851559"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-9673038949803914",
+          enable_page_level_ads: true
+     });
+</script>
+<h1 id="machinedeeplearningtasksfornetworkmanagement">Machine &amp; Deep Learning Tasks for Network Management</h1>
+<p>This section provides an overview of different tasks that machine/deep learning approaches can be applied in the networking domain based on these recent surveys &amp; reviews.</p>
+<h3 id="supervisedlearningproblems">Supervised Learning Problems</h3>
+<p>Many problems associated to networking can be formulated as a <em>prediction</em> or <em>classification</em> problem.</p>
+<p><strong>Traffic prediction</strong>: Depends on whether the traffic prediction is performed with direct observations or not, there are two research directions:</p>
+<ul>
+<li>
+<p><em>Time series analysis</em> for traffic prediction with direct observations. However, it is sometimes difficult to observe in the context of large-scale and high speed network environment.</p>
+</li>
+<li>
+<p><a href="https://netbeez.net/blog/network-tomography/"><em>Network tomography</em></a> which predicts traffic using indirect metrics either (1) with engineered features with domain knowledge or (2) using machine/deep learning approaches for end-to-end learning, i.e., learning high-level features automatically.</p>
+</li>
+</ul>
+<p><strong>Traffic classification</strong>: This aims to match network applications &amp; protocols with the corresponding traffic flows <sup class="footnote-ref"><a href="index.html#fn18" id="fnref18">[18]</a></sup>. As the misclassfication causes a big cost in the context of networking, it is challenging to deal with robustness such as how the devised model performs on unknown traffic.</p>
+<p><strong>Resource prediction</strong>: In order to improve the network performance in a cost efficent way, there are many dynamic allocation problems to deal with such as assigning optimal number of Virtual Machines (VMs). The fundamental step is predicting resource usage, e.g., predicting the CPU consumption based on traffic features.</p>
+<p><strong>Network performance prediction</strong>: Similar to the abovementioned prediction problems, there are many prediction problems associated to network performance such as video QoE (Quality of Experience).</p>
+<h3 id="reinforcementlearning">Reinforcement Learning</h3>
+<p>Reinforcement learning deals with agents which learn to make better decisions through experience, i.e., the agents start without any knowledge about a task and learn the corresponding model of the task by reinforcement - the actions they take and the reward they get with these actions <sup class="footnote-ref"><a href="index.html#fn19" id="fnref19">[19]</a></sup>.</p>
+<p><strong>Resource management</strong>: This type of problems is ubiquitous in networking such as virtual machine placement &amp; autoscaling in cloud computing <sup class="footnote-ref"><a href="index.html#fn20" id="fnref20">[20]</a></sup> and packing tasks with multiple resource demands <sup class="footnote-ref"><a href="index.html#fn19" id="fnref19:1">[19:1]</a></sup>.</p>
+<p><strong>Self-Organizing Netowrks (SON)</strong> <sup class="footnote-ref"><a href="index.html#fn21" id="fnref21">[21]</a></sup>: With the increasing topological and functional complexity of networks, <em>Self-Organizing Networks</em> is in demand for network control and operations. SON consists of all <a name="son"><em>Self-X</em></a>  capabilities such as:</p>
+<ul>
+<li><em>Self-Configuration</em> of system parameters with changing environment</li>
+<li><em>Self-Optimization</em> of the network performance</li>
+<li><em>Self-Healing</em> of the system, i.e., recovering network functionalities &amp; services after fault or failures</li>
+</ul>
+<h3 id="unsupervisedlearning">Unsupervised Learning</h3>
+<p>There are many situations that we do not have labeled data for supervised learning or it is impractical to wait for feedback for reinforcement learning. Unsupervised learning aims to infer representations from data that has not been labeled, classified or categorized. These representations can be used for many downstream tasks such as clustering, or improving the performance of related supervised learning tasks. In contrast to the amount of works done with supervised learning and reinforcement learning for different problems in the networking field, unsupervised learning has been less explored in this field <sup class="footnote-ref"><a href="index.html#fn11" id="fnref11:2">[11:2]</a></sup>.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- parklize_main_Blog1_728x90_as -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9673038949803914"
+     data-ad-slot="4115851559"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>However, unsupervised learning has gained a lot of attention and successfully advancing other fields such as NLP. For example, word2vec <sup class="footnote-ref"><a href="index.html#fn22" id="fnref22">[22]</a></sup> in NLP clearly shows the latent representations of words which are pre-trained (or learned via an unsupervised learning approach) with a large corpus of documents (e.g., <a href="https://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> can be used for many downstream tasks such as document clustering and sentiment classification.</p>
+<p><strong>Learing internal representations of networking data</strong>: COMANETS (COgnition-BAsed NETworkS) <sup class="footnote-ref"><a href="index.html#fn21" id="fnref21:1">[21:1]</a></sup> is a recent concept for leveraging unsupervised learning (using Restricted Boltzmann Machine) to learn the latent representations of networking data. A practical example using the COMANETS concept for cognitive controlling video traffic shows that using the latent representations can improve the control performance compared to the raw networking features.</p>
+<p>The following figure shows the COMPANETS concept <sup class="footnote-ref"><a href="index.html#fn21" id="fnref21:2">[21:2]</a></sup>. Similar to the word vectors (latent representations or embeddings) in NLP, the latent representations of networking data can be used for many downstream tasks along with supervised learning &amp; reinforcement learning.</p>
+<img src="../content/images/2018/10/aa1.png" alt="drawing" width="80%"/>
+<p><strong>Traffic Classification</strong>: Although the majority of previous studies for traffic classification is based on supervised learning approaches, leveraging completely unsupervised methods for traffic classification is an ongoing research topic <sup class="footnote-ref"><a href="index.html#fn11" id="fnref11:3">[11:3]</a></sup>.</p>
+<p><strong>Anomaly/Intrusion Detection</strong>: Identifying intrusion and anomaly behavior that deviates from normal behavior plays important role in networking with respec to its performance as well as security. Anomaly/Intrusion Detection can be done either in a supervised or unsupervised manner <sup class="footnote-ref"><a href="index.html#fn23" id="fnref23">[23]</a></sup>.</p>
+<p> </p>
+<h3 id="decisionmaking">Decision Making</h3>
+<p>The objective of leveraging abovementioned techniques is to make a decision either completely automatically or to help humans make decisions. Depends on whether there is human involvement or not, the decision making can be done in a (1) <strong>closed loop</strong> or (2) <strong>open loop</strong>. The following figure from <sup class="footnote-ref"><a href="index.html#fn5" id="fnref5:1">[5:1]</a></sup> summarizes the three types of machine learning approaches in terms of decision making.</p>
+<img src="../content/images/2018/10/aa-2.png" alt="drawing" width="60%"/>
+<p> <br>
+<strong>Closed loop</strong>: The models learned from supervised learning or reinforcement learning can be directly used for <em>automation</em> and making decisions by itself without any human (e.g., operator) involvement. The models can also be used for <em>optimizing</em> the network configuration out of different possible configurations based on the corresponding performance. The knowledge extracted via unsupervised learning can be used for improving other tasks with respect to networking.</p>
+<p><strong>Open loop</strong>: In this case, human is still in charge of making the final decision, and the insight (e.g., predicted values, classes etc.) helps humans to make the decision. For example, a human can <em>validate</em> and then approve/deny the decisions made by a model learned via supervised learning, or use the <em>estimation</em> of the model into consideration. Similarly, the correlations between different features can be taken into consideration when a human making decision.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- parklize_main_Blog1_728x90_as -->
+<p><ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9673038949803914"
+     data-ad-slot="4115851559"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h1 id="benchmarkdatasets">Benchmark Datasets</h1>
+<p>Given the recent rapid development of machine &amp; deep learning in other domains with benchmark datasets such as <a href="http://www.image-net.org/">ImageNet</a> for Computer Vision &amp; the ones (<a href="http://nlpprogress.com/">http://nlpprogress.com/</a>) for Natural Language Processing, it is obvious that we need to push hard to have many benchmarks available for advancing machine &amp; deep learning approaches in the networking domain<sup class="footnote-ref"><a href="index.html#fn6" id="fnref6:2">[6:2]</a></sup>. In the following table, we summarize some benchmark datasets that are publicly available for benchmarking different machine/deep learning algorithms.</p>
+<h3 id="prediction">Prediction</h3>
+<table>
+<thead>
+<tr>
+<th>Dataset                         </th>
+<th>Description                         </th>
+<th style="text-align:center">Ref.                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org">VNF (OVS)</a></td>
+<td>predicting CPU consumption of an OVS connected to a SDN controller with respect to 86 traffic features</td>
+<td style="text-align:center"><sup class="footnote-ref"><a href="index.html#fn5" id="fnref5:2">[5:2]</a></sup></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org">VNF (Firewall)</a></td>
+<td>predicting CPU consumption of a Firewall connected to a SDN controller with respect to 86 traffic features</td>
+<td style="text-align:center"><sup class="footnote-ref"><a href="index.html#fn5" id="fnref5:3">[5:3]</a></sup></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org">VNF (Snort)</a></td>
+<td>predicting CPU consumption of a Snort connected to a SDN controller with respect to 86 traffic features</td>
+<td style="text-align:center"><sup class="footnote-ref"><a href="index.html#fn5" id="fnref5:4">[5:4]</a></sup></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org">Overlay-Underlay</a></td>
+<td>predicting the average delays among paths between overlay nodes given the traffic volumn &amp; the rounting</td>
+<td style="text-align:center"><sup class="footnote-ref"><a href="index.html#fn5" id="fnref5:5">[5:5]</a></sup></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org/">Routing</a></td>
+<td>knowledgedefinedneFlow-level delay in a scale-free network with 4 different routings</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org/">Saturation</a></td>
+<td>Delay among pairs of nodes in a 10-nodes scale-free network changing the traffic intensity and traffic distribution</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org/">NetSize</a></td>
+<td>Delay among pairs of nodes in a 5, 10 and 15 nodes scale-free network.</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td><a href="http://knowledgedefinednetworking.org/">Topologies</a></td>
+<td>Delay among pairs of nodes in different topologies and sizes.</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td><a href="https://github.com/wsdream/wsdream-dataset">WS-DREAM</a></td>
+<td>QoS datasets  collected from real-world Web services.</td>
+<td style="text-align:center"><sup class="footnote-ref"><a href="index.html#fn24" id="fnref24">[24]</a></sup></td>
+</tr>
+</tbody>
+</table>
+<h3 id="classification">Classification</h3>
+<table>
+<thead>
+<tr>
+<th>Dataset                         </th>
+<th>Description                        </th>
+<th>Ref.                          </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://mawi.wide.ad.jp/mawi/">MAWI</a></td>
+<td>MAWI Working Group Traffic Archive</td>
+<td><sup class="footnote-ref"><a href="index.html#fn25" id="fnref25">[25]</a></sup></td>
+</tr>
+<tr>
+<td><a href="https://wand.net.nz/wits/">WITS</a></td>
+<td>Waikato Internet Traffic Storage</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.icir.org/enterprise-tracing/">LBNL/ICSI</a></td>
+<td>LBNL/ICSI Enterprise Tracing Project</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://kdd.ics.uci.edu/databases/kddcup99/kddcup99.html">KDD99</a></td>
+<td>Classifying <em>intrusion</em> &amp; <em>normal</em> connection</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://www.neteye-blog.com/netcla-the-ecml-pkdd-network-classification-challenge/">NetCla</a></td>
+<td>NetCla: The ECML-PKDD Network Classification Challenge</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p> <br>
+I hope you found this overview useful. If I made any error, missed a relevant reference &amp; dataset, or misrepresented some aspect, or if you would just like to share your thoughts, please leave a comment below.</p>
+<p>In case you would like to refer the post, consider citing it as:</p>
+<blockquote>
+<p>Guangyuan Piao (2018). &quot;Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks&quot;. <a href="https://goo.gl/gp7gBb">https://goo.gl/gp7gBb</a></p>
+</blockquote>
+<pre><code>@misc{piao2018b1,
+  author = {Piao, Guangyuan},
+  title = {Machine &amp; Deep Learning for Network Management: An Overview with Benchmarks},
+  year = {2018},
+  howpublished = {Blog post},
+  url = {https://goo.gl/gp7gBb}
+}
+</code></pre>
+<h1 id="references">References</h1>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://www.wired.com/2016/05/amazons-giving-away-ai-behind-product-recommendations/">Amazon's Giving Away the AI Behind Its Product Recommendations (2016)</a> <a href="index.html#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>Gomez-Uribe, Carlos A. and Hunt, Neil, &quot;The Netflix Recommender System: Algorithms, Business Value, and Innovation. ACM Transactions on Management Information Systems&quot;, <a href="https://dl.acm.org/citation.cfm?id=2843948">https://dl.acm.org/citation.cfm?id=2843948</a> <a href="index.html#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Fadlullah, Zubair et al. &quot;State-of-the-Art Deep Learning: Evolving Machine Intelligence Toward Tomorrow’s Intelligent Network Traffic Control Systems&quot; (2017). <a href="https://doi.org/10.1109/COMST.2017.2707140">https://doi.org/10.1109/COMST.2017.2707140</a> <a href="index.html#fnref3" class="footnote-backref">↩︎</a> <a href="index.html#fnref3:1" class="footnote-backref">↩︎</a> <a href="index.html#fnref3:2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>A knowledge plane for the internet (2003). SIGCOMM. <a href="http://doi.acm.org/10.1145/863955.863957">http://doi.acm.org/10.1145/863955.863957</a> <a href="index.html#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>Clark, David D. et al. &quot;Knowledge-Defined Networking&quot; (2016). SIGCOMM Reivew. <a href="https://arxiv.org/pdf/1606.06222.pdf">https://arxiv.org/pdf/1606.06222.pdf</a> <a href="index.html#fnref5" class="footnote-backref">↩︎</a> <a href="index.html#fnref5:1" class="footnote-backref">↩︎</a> <a href="index.html#fnref5:2" class="footnote-backref">↩︎</a> <a href="index.html#fnref5:3" class="footnote-backref">↩︎</a> <a href="index.html#fnref5:4" class="footnote-backref">↩︎</a> <a href="index.html#fnref5:5" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn6" class="footnote-item"><p>Wang, Mowei et al. &quot;Machine Learning for Networking: Workflow, Advances and Opportunities&quot; (2017). IEEE Network. <a href="https://arxiv.org/pdf/1709.08339.pdf">https://arxiv.org/pdf/1709.08339.pdf</a> <a href="index.html#fnref6" class="footnote-backref">↩︎</a> <a href="index.html#fnref6:1" class="footnote-backref">↩︎</a> <a href="index.html#fnref6:2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn7" class="footnote-item"><p>Ayoubi, S &quot;Machine Learning for Cognitive Network Management&quot; (2018).  IEEE Communications Magazine. <a href="https://doi.org/10.1109/MCOM.2018.1700560">https://doi.org/10.1109/MCOM.2018.1700560</a> <a href="index.html#fnref7" class="footnote-backref">↩︎</a> <a href="index.html#fnref7:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn8" class="footnote-item"><p>Hyun, N. Van Tu and J. W. Hong, &quot;Towards knowledge-defined networking using in-band network telemetry&quot; (2018). IEEE/IFIP Network Operations and Management Symposium. <a href="https://doi.org/10.1109/NOMS.2018.8406169">https://doi.org/10.1109/NOMS.2018.8406169</a> <a href="index.html#fnref8" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn9" class="footnote-item"><p>Kato, Nei, et al. &quot;The deep learning vision for heterogeneous network traffic control: Proposal, challenges, and future perspective.&quot; IEEE wireless communications 24.3 (2017): 146-153. <a href="https://doi.org/10.1109/MWC.2016.1600317WC">https://doi.org/10.1109/MWC.2016.1600317WC</a> <a href="index.html#fnref9" class="footnote-backref">↩︎</a> <a href="index.html#fnref9:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p>Latah, Majd, and Levent Toker. &quot;Artificial Intelligence Enabled Software Defined Networking: A Comprehensive Overview.&quot; (2018). <a href="https://arxiv.org/abs/1803.06818">https://arxiv.org/abs/1803.06818</a> <a href="index.html#fnref10" class="footnote-backref">↩︎</a> <a href="index.html#fnref10:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p>Usama, Muhammad, et al. &quot;Unsupervised Machine Learning for Networking: Techniques, Applications and Research Challenges.&quot; arXiv preprint arXiv:1709.06599 (2017). <a href="https://arxiv.org/abs/1709.06599">https://arxiv.org/abs/1709.06599</a> <a href="index.html#fnref11" class="footnote-backref">↩︎</a> <a href="index.html#fnref11:1" class="footnote-backref">↩︎</a> <a href="index.html#fnref11:2" class="footnote-backref">↩︎</a> <a href="index.html#fnref11:3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p>Wang, Xiaofei, Xiuhua Li, and Victor CM Leung. &quot;Artificial intelligence-based techniques for emerging heterogeneous network: State of the arts, opportunities, and challenges.&quot; IEEE Access 3 (2015). <a href="https://doi.org/10.1109/ACCESS.2015.2467174">https://doi.org/10.1109/ACCESS.2015.2467174</a> <a href="index.html#fnref12" class="footnote-backref">↩︎</a> <a href="index.html#fnref12:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p>Aliu, Osianoh Glenn, et al. &quot;A survey of self organisation in future cellular networks.&quot; IEEE Communications Surveys &amp; Tutorials 15.1 (2013). <a href="https://doi.org/10.1109/SURV.2012.021312.00116">https://doi.org/10.1109/SURV.2012.021312.00116</a> <a href="index.html#fnref13" class="footnote-backref">↩︎</a> <a href="index.html#fnref13:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn14" class="footnote-item"><p>Boutaba, Raouf, et al. &quot;A comprehensive survey on machine learning for networking: evolution, applications and research opportunities.&quot; Journal of Internet Services and Applications 9.1 (2018). <a href="https://doi.org/10.1186/s13174-018-0087-2">https://doi.org/10.1186/s13174-018-0087-2</a> <a href="index.html#fnref14" class="footnote-backref">↩︎</a> <a href="index.html#fnref14:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn15" class="footnote-item"><p>Qadir, Junaid. &quot;Artificial intelligence based cognitive routing for cognitive radio networks.&quot; Artificial Intelligence Review 45.1 (2016. <a href="https://doi.org/10.1007/s10462-015-9438-6">https://doi.org/10.1007/s10462-015-9438-6</a> <a href="index.html#fnref15" class="footnote-backref">↩︎</a> <a href="index.html#fnref15:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn16" class="footnote-item"><p>Chen, Tao, Rami Bahsoon, and Xin Yao. &quot;A survey and taxonomy of self-aware and self-adaptive cloud autoscaling systems.&quot; ACM Computing Surveys (CSUR) 51.3 (2018): 61. <a href="index.html#fnref16" class="footnote-backref">↩︎</a> <a href="index.html#fnref16:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn17" class="footnote-item"><p>White, Steve R., et al. &quot;An architectural approach to autonomic computing.&quot; Autonomic Computing, 2004. Proceedings. International Conference on. IEEE, 2004. <a href="https://doi.org/10.1109/ICAC.2004.1301340">https://doi.org/10.1109/ICAC.2004.1301340</a> <a href="index.html#fnref17" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn18" class="footnote-item"><p>Nguyen, Thuy TT, and Grenville Armitage. &quot;A survey of techniques for internet traffic classification using machine learning.&quot; IEEE Communications Surveys &amp; Tutorials 10.4 (2008): 56-76. <a href="https://doi.org/10.1109/SURV.2008.080406">https://doi.org/10.1109/SURV.2008.080406</a> <a href="index.html#fnref18" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn19" class="footnote-item"><p>Mao, Hongzi, et al. &quot;Resource management with deep reinforcement learning.&quot; Proceedings of the 15th ACM Workshop on Hot Topics in Networks. ACM, 2016. <a href="https://doi.org/10.1145/3005745.3005750">https://doi.org/10.1145/3005745.3005750</a> <a href="index.html#fnref19" class="footnote-backref">↩︎</a> <a href="index.html#fnref19:1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn20" class="footnote-item"><p>Heller, Brandon, et al. &quot;Elastictree: Saving energy in data center networks.&quot; NDSI. Vol. 10. 2010. <a href="https://www.usenix.org/legacy/event/nsdi10/tech/full_papers/heller.pdf">https://www.usenix.org/legacy/event/nsdi10/tech/full_papers/heller.pdf</a> <a href="index.html#fnref20" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn21" class="footnote-item"><p>Zorzi, Michele, et al. &quot;Cognition-based networks: A new perspective on network optimization using learning and distributed intelligence.&quot; IEEE Access 3 (2015): 1512-1530. <a href="https://doi.org/10.1109/ACCESS.2015.2471178">https://doi.org/10.1109/ACCESS.2015.2471178</a> <a href="index.html#fnref21" class="footnote-backref">↩︎</a> <a href="index.html#fnref21:1" class="footnote-backref">↩︎</a> <a href="index.html#fnref21:2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn22" class="footnote-item"><p>Mikolov, T., Sutskever, I., Chen, K., Corrado, G.S., Dean, J.: Distributed representations of words and phrases and their compositionality. NIPS (2013). pp. 3111–3119. <a href="index.html#fnref22" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn23" class="footnote-item"><p>Tsai, Chih-Fong, et al. &quot;Intrusion detection by machine learning: A review.&quot; Expert Systems with Applications 36.10 (2009). <a href="https://doi.org/10.1016/j.eswa.2009.05.029">https://doi.org/10.1016/j.eswa.2009.05.029</a> <a href="index.html#fnref23" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn24" class="footnote-item"><p>Zibin Zheng, Yilei Zhang, and Michael R. Lyu, “Investigating QoS of Real-<br>
+World Web Services”, IEEE Transactions on Services Computing , vol.7, no.1, pp.32-39, 2014. <a href="index.html#fnref24" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn25" class="footnote-item"><p>Sony, C. S. L., and Kenjiro Cho. &quot;Traffic data repository at the WIDE project.&quot; Proceedings of USENIX 2000 Annual Technical Conference: FREENIX Track. 2000. <a href="index.html#fnref25" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+<!--kg-card-end: markdown-->
+    </div>
+
+    <div class="post related">
+
+        <a rel="next" id="next-btn" class="btn small square" href="../curated-research-advice/index.html">Curated Research Advice →</a>
+    </div>
+
+    <footer class="post comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = '//' + window.disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</footer>
+
+  </article>
+
+
+        <footer>
+  <span class="copyright">
+    &copy; 2021. All rights reserved. Built with <a href="https://github.com/Kikobeats/uno-zen" target="_blank">Uno Zen</a> under <a href="https://ghost.org/" target="_blank">Ghost</a>. Original design by <a href="https://daleanthony.com" target="_blank">Dale Anthony</a>.
+  </span>
+</footer>
+      </section>
+    </main>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+<script>jQuery = Zepto</script>
+
+    <script src="../assets/js/uno-zen.common.js?v=9645247b2e" type="text/javascript" charset="utf-8"></script>
+      <script src="../assets/js/uno-zen.post.js?v=9645247b2e" type="text/javascript" charset="utf-8"></script>
+    <script>
+  if (window.ga_id) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', window.ga_id, 'auto');
+    ga('require', 'linkid', 'linkid.js');
+    ga('send', 'pageview');
+  }
+</script>
+  </body>
+</html>
